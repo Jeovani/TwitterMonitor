@@ -5,54 +5,14 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
 
-import twitter4j.Twitter;
-import twitter4j.TwitterException;
-import twitter4j.TwitterFactory;
-import twitter4j.conf.ConfigurationBuilder;
-
-public class LogInTwitter {
-	
-	private static String consumerKey = "9yEwBctD0ue4iryx5VsPmCLnl";
-	private static String consumerSecret = "SFv522grkHXY98ig2XFIVo2Qoh5yJH2BG1VsJzGy5ge6Ocfc5l";
-	private static String acessToken = "3050918313-J3tJKcZM78c4Wgq59CIMnp4MAjq8dJd3NI21Teq";
-	private static String tokenSecret = "ZJGj3djSE7FfbkCT5wHlycExXDdAhWXZB9RAJPYNe4X8G";
-	
-	private static Twitter configuredTwitter () {
-		
-		ConfigurationBuilder configBuilder = new ConfigurationBuilder().setDebugEnabled(true);
-//		configBuilder.setOAuthConsumerKey(consumerKey);
-//		configBuilder.setOAuthConsumerSecret(consumerSecret);
-//		configBuilder.setOAuthAccessToken(acessToken);
-//		configBuilder.setOAuthAccessTokenSecret(tokenSecret);	
-		
-//		TwitterFactory tf = new TwitterFactory().getInstance();
-		Twitter twitter = new TwitterFactory().getInstance();	
-		
-		return twitter;
-		
-	}
-	
-	private static void updateStatusTwitter () {
-		Twitter twitter = configuredTwitter();
-		
-		try {
-//			System.out.println(twitter.getOAuthRequestToken());
-//			System.out.println(twitter.getOAuthRequestToken().getAuthorizationURL());
-			twitter.updateStatus("Teste de Status");
-		} catch (TwitterException e) {
-			System.out.println(e.getMessage());
-			e.printStackTrace();
-		}
-	}
+public class TransformationTwitter {
 	
 	private static void convertToDate () throws Exception{
 		
@@ -190,12 +150,5 @@ public class LogInTwitter {
                   System.out.println(e);
            }
     }
-	
-	
-	public static void main(String[] args) throws Exception{
-//		countFonte();
-		convertToDate();
-//		updateStatusTwitter();
-	}
 
 }
