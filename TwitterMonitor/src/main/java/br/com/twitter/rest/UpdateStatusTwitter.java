@@ -1,5 +1,6 @@
-package br.com.twitter.login;
+package br.com.twitter.rest;
 
+import br.com.twitter.connect.ConnectTwitter;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
 

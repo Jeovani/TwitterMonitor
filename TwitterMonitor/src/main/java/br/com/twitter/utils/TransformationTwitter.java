@@ -1,4 +1,4 @@
-package br.com.twitter.login;
+package br.com.twitter.utils;
 
 import java.io.BufferedWriter;
 import java.io.File;

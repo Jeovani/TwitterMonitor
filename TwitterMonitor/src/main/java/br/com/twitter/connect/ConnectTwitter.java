@@ -1,4 +1,4 @@
-package br.com.twitter.login;
+package br.com.twitter.connect;
 
 import twitter4j.Twitter;
 import twitter4j.TwitterFactory;
