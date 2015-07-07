@@ -15,10 +15,7 @@ public class MonitorStatus {
         StatusListener listener = new StatusListener() {
             @Override
             public void onStatus(Status status) {
-            	String screenName = status.getUser().getScreenName();
-            	if(screenName.startsWith("jeo")){
-            		System.out.println("@" + screenName + " - " + status.getText());
-            	}
+            	System.out.println("@" + status.getUser().getScreenName() + " - " + status.getText());
             }
 
             @Override
@@ -52,7 +49,7 @@ public class MonitorStatus {
 	}
 	
 	public static void main(String[] args) {
-		
+
 	}
 
 }
